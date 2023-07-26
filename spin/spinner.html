@@ -1,0 +1,79 @@
+<div class="loading-container">
+    <div class="loading">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+  <style>
+    .loading-container {
+      width: 14px;
+      height: 14px;
+      display:flex;
+      flex-flow: row nowrap;
+      justify-content:space-between;
+    }
+    
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .loading-bar {
+      display: inline-block;
+      width: 3px;
+      height: 14px;
+      border-radius: 0px;
+      margin-right: 0px;
+      animation: loading 1s ease-in-out infinite;
+      margin-right: 0px;
+      animation-fill-mode: backwards;
+    }
+    
+    .loading-bar:nth-child(1) {
+      background-color: rgba(22, 23, 24, 0.8); /* Initial color with 80% opacity */
+      animation-delay: 0;
+    }
+    
+    .loading-bar:nth-child(2) {
+      background-color: rgba(109, 115, 121, 0.8); /* 80% opacity */
+      animation-delay: 0.1s;
+    }
+    
+    .loading-bar:nth-child(3) {
+      background-color: rgba(22, 23, 24, 0.8); /* 80% opacity */
+      animation-delay: .2s;
+    }
+    
+    .loading-bar:nth-child(4) {
+      background-color: rgba(109, 115, 121, 0.8); /* 80% opacity */
+      animation-delay: .3s;
+    }
+    
+    @keyframes loading {
+      0% {
+        transform: scaleY(0);
+        background-color: rgba(109, 115, 121, 0.8); /* Initial color with 80% opacity */
+      }
+      25% {
+        transform: scaleY(0.5);
+        background-color: rgba(109, 115, 121, 0.6); /* 60% opacity */
+      }
+      50% {
+        transform: scaleY(1);
+        background-color: rgba(22, 23, 24, 0.8); /* 80% opacity */
+      }
+      75% {
+        transform: scaleY(0.5);
+        background-color: rgba(22, 23, 24, 0.6); /* 60% opacity */
+      }
+      100% {
+        transform: scaleY(0);
+        background-color: rgba(109, 115, 121, 0.8); /* Final color with 80% opacity */
+      }
+    }
+    </style>
+    
